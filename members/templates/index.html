@@ -1,8 +1,10 @@
 <h1>Members</h1>
 
 <table border="1">
-{% for x in mymembers %}
-<tr>
+{% for x in mymembers reversed %}
+
+<tr style='background-color:{% cycle 'lightblue' 'pink' %}'>
+<td>{{ forloop.revcounter }}</td>
 <td>{{ x.id }}</td>
 <td>{{ x.firstname }}</td>
 <td>{{ x.lastname }}</td>
@@ -13,4 +15,7 @@
 </table>
 <p>
     <a href="add/">Add Member</a>
+</p>
+<p>
+    <a href="testing_queries/">Test Query</a>
 </p>
